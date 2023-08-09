@@ -1,4 +1,4 @@
-FROM alpine as builder
+FROM alpine:3.18.3 as builder
 
 RUN \
 	apk -U upgrade --no-cache && \
@@ -10,7 +10,7 @@ RUN \
 	make 
 
 ################################
-FROM alpine
+FROM alpine:3.18.3
 
 RUN apk -U upgrade --no-cache 
 
